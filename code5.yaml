@@ -9,3 +9,17 @@
         path: /etc/selinux/semanage.conf
         regexp: '^module-store ='
         line: 'module-store = false'
+
+    - name:  Insert a line after 
+      lineinfile:
+        path: /etc/selinux/semanage.conf
+        # regexp: '^module-store ='
+        insertafter: '^module-store ='
+        line: 'module-store = claudius'
+
+
+    - name:  Delete a line
+      lineinfile:
+        path: /etc/selinux/semanage.conf
+        state: absent
+        regexp: '^module-store = false'
