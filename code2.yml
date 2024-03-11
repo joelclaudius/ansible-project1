@@ -4,6 +4,20 @@
   gather_facts: no
   ignore_errors: yes
   tasks:
+    - name: install softwares
+      package:
+        state: present
+        name: "{{ item }}"
+      with_items:
+          - httpd
+          - git
+          - vim
+          - tree
+          - wget
+          - curl
+          - finger
+          - telnet
+          - ntp
     - name: create group
       group:
         name: mygroup
