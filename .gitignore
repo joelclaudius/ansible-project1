@@ -1,0 +1,10 @@
+*ansible
+ansible.cfg
+remoting.jar
+.bash_history
+caches
+remoting
+workplace
+.bashrc
+.bash_logout
+.bash
